@@ -32,15 +32,29 @@ class MainActivity : ComponentActivity() {
 }
 
 fun week02Variables(){
-    println("week02 variables")
+//    println("week02 variables")
+//
+//    val courseName = "Moblie Programming"
+//    // courseName = "IoT Programming"
+//    var week = 1
+//    week = 2
+//    // 변수 값을 바꾸는 게 가능함
+//    println("Course : $courseName")
+//    println("week : $week")\
 
-    val courseName = "Moblie Programming"
-    // courseName = "IoT Programming"
-    var week = 1
-    week = 2
-    // 변수 값을 바꾸는 게 가능함
-    println("Course : $courseName")
-    println("week : $week")
+    println("== Kotlin Variables ==")
+
+//    val name : String = "Android"
+    val name ="Androi"
+    var version=8.1
+    println("Hello $name $version")
+
+    val age : Int = 23
+    val height : Double = 177.7
+    val isStudent : Boolean = false
+
+    println("Age : $age, Height : $height, Student : $isStudent")
+
 
 
 }
