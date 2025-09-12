@@ -27,9 +27,23 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        week02Variables()
     }
 }
 
+fun week02Variables(){
+    println("week02 variables")
+
+    val courseName = "Moblie Programming"
+    // courseName = "IoT Programming"
+    var week = 1
+    week = 2
+    // 변수 값을 바꾸는 게 가능함
+    println("Course : $courseName")
+    println("week : $week")
+
+
+}
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
