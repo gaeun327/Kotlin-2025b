@@ -27,61 +27,90 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        week02Variables()
-        week02Functions()
+//        week02Variables()
+//        week02Functions()
+        week03Classes()
     }
 }
 
-fun week02Functions(){
-    println("week02 functions")
 
-//    fun greet(name : String ) = "hello, $name"
+private fun week03Classes(){
+    println("== Kotlin Classes ==")
+
+    class Student{
+        var name: String = ""
+        var age: Int = 0
+
+        fun introduce(){
+            println("Hi, I'm $name and I'm $age years old")
+        }
+    }
+    val student = Student()
+    student.name = "Choi"
+    student.age = 22
+    student.introduce()
+
+    data class Person(val name: String, val age: Int)
+
+    val person1 = Person("Lee", 24)
+    val person2 = Person("Lee", 24)
+
+    println("Person1: $person1")
+    println("Equal?: ${person1 == person2}")
+}
+
+
+private fun week02Functions(){
+    println("Week02 Functions")
 //
-//    println(greet("android developer"))
-    println("== Kotlin Function ==")
-    fun greet(name: String): String{
-        return "Hello, $name"
+//    fun greet(name: String) = "Hello, $name!"
+//
+//    println(greet("Android Developer"))
 
+    println("== Kotlin Functions ==")
+
+    fun greet(name: String): String {
+        return "Hello, $name"
     }
 
-    fun add(a:Int,b:Int)=a+b
-    fun introduce(name : String,age : Int = 19){
-        println("my name is $name and I'm $age years old")
+    fun add(a: Int, b: Int) = a + b
+
+
+    fun introduce(name: String, age: Int = 19){
+        println("My name is $name and I'm $age years old")
     }
 
     println(greet("Kotlin"))
-    println("Sum: ${add(5,-71)}")
-    introduce("park")
-    introduce("kim",29)
-
+    println("Sum : ${add(5, -71)}")
+    introduce("Park")
+    introduce("Kim", 29)
 }
-fun week02Variables(){
-//    println("week02 variables")
+
+private fun week02Variables(){
+//    println("Week02 Variables")
 //
-//    val courseName = "Moblie Programming"
-//    // courseName = "IoT Programming"
+//    val courseName = "Mobile Programming"
+//    //courseName = "IoT Programming"
 //    var week = 1
 //    week = 2
-//    // 변수 값을 바꾸는 게 가능함
+//
 //    println("Course : $courseName")
-//    println("week : $week")\
+//    println("Week : $week")
 
     println("== Kotlin Variables ==")
 
-//    val name : String = "Android"
-    val name ="Androi"
-    var version=8.1
+//    val name: String = "Android"
+    val name = "Android"
+    var version = 8.1
     println("Hello $name $version")
 
-    val age : Int = 23
-    val height : Double = 177.7
-    val isStudent : Boolean = false
+    val age: Int = 23
+    val height: Double = 177.7
+    val isStudent: Boolean = false
 
-    println("Age : $age, Height : $height, Student : $isStudent")
-
-
-
+    println("Age : $age, Height : $height, Student: $isStudent")
 }
+
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
