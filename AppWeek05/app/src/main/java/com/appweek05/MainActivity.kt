@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             val studentName = studentList[position]
             Toast.makeText(
                 this,
-                "Selected: $studentName (Position: ${position+1}",
+                "Selected: $studentName (Position: ${position+1})",
                 Toast.LENGTH_SHORT
             ).show()
             Log.d(TAG, "Selected: $studentName at position: $position")
